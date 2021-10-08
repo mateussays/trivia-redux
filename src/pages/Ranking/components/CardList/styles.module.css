@@ -1,6 +1,6 @@
 .container {
   align-items: center;
-  border: 1px solid gray;
+  border: 1px solid var(--purple);
   border-radius: 20px;
   display: flex;
   margin: 15px;
@@ -8,14 +8,27 @@
   width: 300px;
 }
 
+.container span {
+  color: var(--violet);
+  font-weight: 800;
+  margin-right: 5px;
+}
+
 .score {
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
+  color: var(--violet);
 }
 
 .score hr {
   border-bottom: 0;
-  border-top: 1px solid rgb(192, 190, 190);
+  border-top: 1px solid var(--green);
   width: 100%;
+}
+
+.score span {
+  font-weight: 800;
+  margin-left: 5px;
 }

@@ -1,0 +1,35 @@
+.container {
+  max-width: 600px;
+  margin: 130px auto;
+  background-color: white;
+  border-radius: 45px;
+  padding: 60px;
+}
+
+.container a {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.title {
+  background: linear-gradient(var(--purple-blue), var(--purple));
+  border-radius: 40px;
+  color: white;
+  font-weight: 800;
+  left: 50%;
+  padding: 20px 28px;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 20%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}

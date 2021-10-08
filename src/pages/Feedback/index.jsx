@@ -2,6 +2,7 @@ import React from 'react';
 import { func } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import styles from './styles.module.css';
 
 import { setPlayerInRanking } from '../../utils/localStorage';
 
@@ -14,16 +15,17 @@ class Feedback extends React.Component {
     const { player: { score, assertions } } = state;
     return (
       <section>
-        <p data-testid="feedback-text">
-          {assertions < minimunAssertions ? 'Podia ser melhor...' : 'Mandou bem!'}
+        <span className={ styles.title }>Feedback</span>
+        <p data-testid="feedback-text" className={ styles.title2 }>
+          {assertions < minimunAssertions ? 'Podia ser melhor :(' : 'Mandou bem! '}
         </p>
-        <p>
+        <p className={ styles.score }>
           Pontuação Final:
           <span data-testid="feedback-total-score">
             { score }
           </span>
         </p>
-        <p>
+        <p className={ styles.score }>
           Número de acertos:
           <span data-testid="feedback-total-question">
             { assertions }
@@ -39,6 +41,7 @@ class Feedback extends React.Component {
         <button
           type="button"
           data-testid="btn-play-again"
+          className="btn-primary"
         >
           Jogar Novamente
         </button>
@@ -52,6 +55,7 @@ class Feedback extends React.Component {
         <button
           type="button"
           data-testid="btn-ranking"
+          className="btn-primary"
         >
           Ver Ranking
         </button>
@@ -66,9 +70,13 @@ class Feedback extends React.Component {
     return (
       <section>
         <Header />
-        {this.feedbackInfos()}
-        {this.buttonPlayAgain(dispatchReset)}
-        {this.buttonRanking()}
+        <div className={ styles.container }>
+          {this.feedbackInfos()}
+          <div className={ styles.container2 }>
+            {this.buttonPlayAgain(dispatchReset)}
+            {this.buttonRanking()}
+          </div>
+        </div>
       </section>
     );
   }

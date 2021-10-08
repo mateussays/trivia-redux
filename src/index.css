@@ -30,6 +30,10 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn-primary {
   background: var(--green-gradient);
   border: none;

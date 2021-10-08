@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { MdSettings } from 'react-icons/md';
 import { tokenResponseAPI } from '../../actions/tokenAction';
 import { getQuestionsThunk } from '../../actions/gameActions';
 import styles from './styles.module.css';
@@ -90,15 +88,6 @@ class Login extends Component {
             Jogar
           </button>
         </form>
-        <Link to="/settings">
-          <button
-            type="button"
-            data-testid="btn-settings"
-            className={ styles.settings }
-          >
-            <MdSettings />
-          </button>
-        </Link>
         <Authors />
       </div>
     );
